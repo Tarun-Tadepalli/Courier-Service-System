@@ -1,0 +1,134 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+<h:outputStylesheet library="css" name="parcel.css" />
+</h:head> 
+<body class="form-v10"> 
+<div class="page-content">
+		<div class="form-v10-content">
+			<h:form styleClass="form-detail">
+				<div class="form-left">
+					<h2>General Information</h2>
+					<div class="form-row">
+					
+					<h:inputText id="pname" styleClass="input-text" required="true" requiredMessage="Product Name is Mandatory" validatorMessage="Name must have minimum 3 characters" value="#{parcelbean.pname}" >
+					<f:validateLength minimum="3" maximum="20"/>
+					<f:passThroughAttribute name="placeholder" value="Product Name"/>
+					<h:message for="pname" style="color:red"/>
+					</h:inputText>
+						
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<h:inputText id="weight" styleClass="input-text" required="true" requiredMessage="Weight is Mandatory" validatorMessage="Weight must be minimum 0 kgs" value="#{parcelbean.weight}" >
+							<f:validateDoubleRange minimum="0.0"/>
+							<f:passThroughAttribute name="placeholder" value="Weight"/>
+							</h:inputText>
+							<h:message for="weight" style="color:red"/>
+						</div>
+						<div class="form-row form-row-2">
+						<h:selectOneMenu id="ptype" styleClass="input-text" required="true" requiredMessage="Select Type" value="#{parcelbean.ptype}">
+							<f:selectItem itemLabel="--Select--" itemValue=""/>
+							<f:selectItem itemLabel="Liquids" itemValue="LIQUIDS"/>
+							<f:selectItem itemLabel="Foods" itemValue="FOODS"/>
+							<f:selectItem itemLabel="Handle with care" itemValue="HANDLE WITH CARE"/>
+							</h:selectOneMenu>
+							<h:message for="ptype" style="color:red"/>
+						</div>
+					</div>
+					<div class="form-row">
+						<h:selectOneMenu id="stype" styleClass="input-text" required="true" requiredMessage="Select Shipping Type" value="#{parcelbean.shipping_type}">
+							<f:selectItem itemLabel="--Select--" itemValue=""/>
+							<f:selectItem itemLabel="Local Courier Services" itemValue="LCS"/>
+							<f:selectItem itemLabel="Global Courier Services" itemValue="GCS"/>
+							<f:selectItem itemLabel="Standard Delivery Services" itemValue="SDC"/>
+							<f:selectItem itemLabel="Same-Day Couriers" itemValue="SAMEDC"/>
+							<f:selectItem itemLabel="Overnight Shipping" itemValue="OS"/>
+							<f:selectItem itemLabel="Rush and On-Demand Deliveries" itemValue="ROD"/>
+							<f:selectItem itemLabel="Scheduled Deliveries" itemValue="SD"/>
+							</h:selectOneMenu>
+							<h:message for="stype" style="color:red"/>
+					</div>
+					<h2>Sender Details</h2>
+					<div class="form-row">
+					<h:inputText id="sendername" styleClass="additional" required="true" requiredMessage="Sender Name is Mandatory" validatorMessage="Name must have minimum 3 characters" value="#{parcelbean.sname}" >
+					<f:validateLength minimum="3" maximum="20"/>
+					<f:passThroughAttribute name="placeholder" value="Sender Name"/>
+					<h:message for="sendername" style="color:red"/>
+					</h:inputText>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-3">
+							<h:inputText id="scity" styleClass="scity" required="true" requiredMessage="City is Mandatory" validatorMessage="City must have maximum 30 characters" value="#{parcelbean.scity}" >
+							<f:validateLength maximum="30"/>
+							<f:passThroughAttribute name="placeholder" value="Sender City"/>
+							<h:message for="scity" style="color:red"/>
+							</h:inputText>
+						</div>
+						<div class="form-row form-row-4">
+							<h:inputText styleClass="form-control" id="scontact" required="true" requiredMessage="Phone No. is mandatory field" validatorMessage="Contact no. must contain 10 digits only" value="#{parcelbean.scontact}">
+							<f:passThroughAttribute name="placeholder" value="Sender Contact"/>
+							<f:validateRegex pattern="^[0-9]{10}$" />
+							</h:inputText> 
+							<h:message for="scontact" style="color:red"/>
+						</div>
+					</div>
+					
+				</div>
+				<div class="form-right">
+					<h2>Receiver Details</h2>
+					<div class="form-row">
+					<h:inputText id="rname" styleClass="additional" required="true" requiredMessage="Receiver Name is Mandatory" validatorMessage="Name must have minimum 3 characters" value="#{parcelbean.rname}" >
+					<f:validateLength minimum="3" maximum="20"/>
+					<f:passThroughAttribute name="placeholder" value="Receiver Name"/>
+					<h:message for="rname" style="color:red"/>
+					</h:inputText>
+					</div>
+					<div class="form-row">
+						<h:inputText id="raddress" styleClass="additional" required="true" requiredMessage="Receiver Name is Mandatory" validatorMessage="Addrees must have maximum 40 characters" value="#{parcelbean.raddress}" >
+						<f:validateLength minimum="5" maximum="40"/>
+						<f:passThroughAttribute name="placeholder" value="Receiver Address"/>
+						<h:message for="raddress" style="color:red"/>
+						</h:inputText>
+					</div>
+					<div class="form-row">
+							<h:inputText id="rcity" styleClass="zip" required="true" requiredMessage="Receiver City is Mandatory" validatorMessage="City must have maximum 30 characters" value="#{parcelbean.rcity}" >
+							<f:validateLength maximum="30"/>
+							<f:passThroughAttribute name="placeholder" value="Receiver City"/>
+							<h:message for="rcity" style="color:red"/>
+							</h:inputText>
+					</div>
+					<div class="form-row">
+							<h:inputText id="rcontact" styleClass="place" required="true" requiredMessage="Receiver Contact is Mandatory" validatorMessage="Contact no. must contain 10 digits only" value="#{parcelbean.rcontact}" >
+							<f:passThroughAttribute name="placeholder" value="Receiver Contact"/>
+							<f:validateRegex pattern="^[0-9]{10}$" />
+							<h:message for="rcontact" style="color:red"/>
+							</h:inputText>
+					</div>
+					<div class="form-row">
+						<h:inputText styleClass="additional" id="remail" required="true" requiredMessage="Email is a mandatory field" validatorMessage="Email is not valid" value="#{parcelbean.remail}">
+						<f:validateRegex pattern="([^.@]+)(\.[^.@]+)*@([^.@]+\.)+([^.@]+)" />
+						<f:passThroughAttribute name="placeholder" value="Receiver Email"/>
+						</h:inputText> 
+						<h:message for="remail" style="color:red"/>
+					</div>
+					
+					<div class="form-checkbox">
+						<label class="container"><p>I do accept the <a href="#" class="text">Terms and Conditions</a> of your site.</p>
+						  	<input type="checkbox" name="checkbox"/>
+						  	<span class="checkmark"></span>
+						</label>
+					</div>
+					<div class="form-row-last">
+						<h:commandButton id="add" styleClass="register" value="Add Product" action="#{parcelbean.padd()}"/>
+					</div>
+				</div>
+			</h:form>
+		</div>
+	</div>
+</body> 
+</html>

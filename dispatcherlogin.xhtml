@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+<title>Dispatcher Login</title>
+<h:outputStylesheet library="css" name="dispatcherlogin.css" />
+<style type="text/css">
+    .login-text p {
+        font-family: cursive; /* Change font family here */
+    }
+</style>
+</h:head> 
+<body> 
+<div class="wrapper">
+    <div class="container">
+        <div class="col-left">
+            <div class="login-text">
+                <h2>ShipIt</h2>
+                <p/>
+                <p/>
+                <p/>
+                
+                <h3>Dispatcher</h3>
+                <p>Effortless tracking and instant updates on your deliveries. Keep control at your fingertips with our Dispatcher portal.</p>
+            </div>
+        </div>
+        <div class="col-right">
+            <div class="login-form">
+                <h3>Dispatcher's</h3>
+                <h2>Login</h2>
+                <h:form>
+                    <h:messages globalOnly="true" layout="table" style="color:red"/>
+                    <p>
+                        <h:outputLabel for="username" value="Enter Username"/>
+                        <h:inputText id="username" validatorMessage="Username length must be in between 3 and 30" value="#{dispatcherbean.username}">
+                            <f:validateLength minimum="3" maximum="30"/>
+                        </h:inputText>
+                    </p>
+                    <p>
+                        <h:outputLabel for="password" value="Enter Password"/>
+                        <h:inputSecret id="password" validatorMessage="Password length must be in between 3 and 30" value="#{dispatcherbean.password}">
+                            <f:validateLength minimum="3" maximum="30"/>
+                        </h:inputSecret>
+                    </p>
+                    <p>
+                        <h:outputLabel for="login"/>
+                        <h:commandButton styleClass="btn" id="login" value="Login" action="#{dispatcherbean.validatedispatcherlogin()}"/>
+                    </p>
+                    <p>
+                        <a href="emailvalidate.jsf">Forget password?</a>
+                        <a href="dispatcherregistration.jsf">Create an account</a>
+                    </p>
+                </h:form>
+            </div>
+        </div>
+    </div>
+</div>
+</body> 
+</html>

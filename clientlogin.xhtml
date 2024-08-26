@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+<title>Client Login</title>
+<h:outputStylesheet library="css" name="clientlogin.css" />
+</h:head> 
+<body> 
+<div class="wrapper">
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>ShipIt</h2>
+                    <p>Track your orders in real-time, review your comprehensive order history, and customize your shipping preferences effortlessly. Experience seamless order management and exceptional user experience with ShipIt.</p>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="login-form">
+                    <h3>Client's</h3>
+                    <h2>Login</h2>
+                    <h:form>
+                        <p>
+                        <h:outputLabel for="contact" value="Phone No."/>
+                        <h:inputText id="contact" value="#{clientbean.contact}" required="true"/>
+                        </p>
+                        <p>
+                        <h:outputLabel for="password" value="Password"/>
+                        <h:inputSecret id="password" required="true" value="#{clientbean.password}" />
+                        </p>
+                        <p><h:outputLabel for="check"/>
+					<h:commandButton styleClass="btn" id="check" value="Sign In" action="#{clientbean.validatelogin()}"/>
+                        </p>
+                        <p>
+                            <a href="#">Forget password?</a>
+                            <a href="clientsignup.jsf">Create an account</a>
+                        </p>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body> 
+</html>
