@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Client verification</title>
+    <h:outputStylesheet library="css" name="clientlogin.css" />
+    <style type="text/css">
+        .login-text p {
+            font-family: cursive; /* Change font family here */
+        }
+    </style>
+</h:head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>ShipIt</h2>
+                    <p/>
+                    <p/>
+                    <p/>
+                    <h3>Client Email verification</h3>
+                    <br/>
+                    <p>If you have an account you can easily reset your password</p>
+                    <p>with your registered Email.</p>
+                </div>
+            </div>
+
+            <div class="col-right">
+                <div class="login-form">
+                    <h2>Enter your registered Email</h2>
+                    <br/>
+                    <h:form>
+                        <div class="form-group">
+                            <h:inputText value="#{clientbean.email}" required="true" class="form-control" placeholder="Email Address" />
+                        </div>
+                        <h:commandButton value="Verify Email" action="#{clientbean.validateemail}" />
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

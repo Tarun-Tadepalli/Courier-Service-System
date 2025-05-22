@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShipItt</title>
+    <style>
+    body {
+    background-color: #ffe6e6; /* Light pinkish background */
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.objective {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.sub-heading {
+    font-family: 'Verdana', sans-serif;
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.module-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.module-list li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    }
+
+    h3 {
+        margin-left: 100px;
+        font-size: 30px;
+    }
+
+    .contact-link1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-left: 100px;
+    }
+
+    .contact-link1:hover {
+        color: greenyellow;
+    }
+
+    .contact-link1 a {
+        margin-left: 10px;
+        text-decoration: none;
+    }
+
+    .contact-link2 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-left: 100px;
+    }
+
+    .contact-link2:hover {
+        color: skyblue;
+    }
+
+    .contact-link2 a {
+        margin-left: 10px;
+        text-decoration: none;
+    }
+
+    .me {
+        font-size: 36px;
+        color: black;
+    }
+
+    .m {
+        font-size: 36px;
+        color: black;
+    }
+
+    .fa-whatsapp {
+        font-size: 30px;
+        color: green;
+    }
+
+    .contact-link {
+        font-size: 36px;
+        color: rgb(255, 255, 255);
+    }
+
+    .fa2 {
+        font-size: 30px;
+    }
+
+    .cont {
+        height: 660px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: -10%;
+        animation: navbar 1s forwards;
+        animation-delay: 1s;
+    }
+
+    @keyframes navbar {
+        0% {
+            top: -10%;
+        }
+        100% {
+            top: 0;
+        }
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .navbar ul li {
+        list-style: none;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        font-size: 1.3vw;
+        color: var(--color-black);
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .logo {
+        text-decoration: none;
+        font-size: 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bolder;
+        letter-spacing: 3px;
+        color: var(--color-black);
+        font-weight: 400;
+}
+ 
+    </style>
+</head>
+<body>
+<div>
+        <div class="navbar">
+            <a href="index.html" class="logo"><img src="images/trolley.ico" height="40px" alt="Logo"/>&nbsp;ShipIt</a>
+            <ul>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.jsp">Contact</a></li>
+            </ul>
+        </div>
+    <div class="container">
+        <h1 class="main-heading">Courier Service Management Project</h1>
+        <p class="objective"><strong>Objective:</strong> The main objective of this project is to develop an enterprise application that simulates courier service. This project implements the courier service system used for daily activities such as booking, loading, delivery, and status check. Hence, it is recommended to computerize the process by developing the system as the world is progressing in information and technology; computerization becomes a necessity in all walks of life. Calculating the courier bill includes predicting the time required to reach the destination.</p>
+        
+        <h2 class="sub-heading">Modules</h2>
+        <p class="main-content">We have created three modules:</p>
+        <ul class="module-list">
+            <li><strong>Admin:</strong> The admin can add courier products, register dispatchers, delete dispatchers, and allocate parcels to specified dispatchers.</li>
+            <li><strong>Dispatcher:</strong> Dispatchers have to log in, view the couriers allocated to them for dispatch, and update the status of the parcels whether they are in the godown, dispatching, or delivered.</li>
+            <li><strong>Client:</strong> Clients can track their orders and parcels through various IDs and view their history of parcels received.</li>
+        </ul>
+    </div>
+</body>
+</html>

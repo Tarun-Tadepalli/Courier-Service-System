@@ -1,0 +1,154 @@
+:root {
+  --color-black: #000000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 1.3vw;
+  color: var(--color-black);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 40px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  color: var(--color-black);
+  font-weight: 400;
+}
+
+
+.navMenu {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navMenu a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 300px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: rgb(197, 0, 197);
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: rgb(197, 0, 197);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(145px);
+  transform: translateX(145px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(450px);
+  transform: translateX(450px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+
+.trackContainer {
+  margin-top: 250px;
+  margin-left: 600px;
+  width: 400px;
+  padding: 20px;
+  background-color: plum;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.button.active {
+  background-color: #000; /* Active button background color */
+  color: #fff;
+}
+
+.input-field {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.get-otp-button {
+  margin-left: 130px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 40%;
+}
